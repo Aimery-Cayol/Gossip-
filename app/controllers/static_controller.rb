@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
-  attr_accessor :gossips
+  attr_accessor :gossips, :potin
   def team
   end
 
@@ -8,6 +8,10 @@ class StaticController < ApplicationController
 
   def accueil
     @gossips = Gossip.all
+  end
+
+  def potin 
+    
   end 
 
 end
