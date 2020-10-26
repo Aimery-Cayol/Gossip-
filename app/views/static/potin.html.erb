@@ -5,7 +5,7 @@
 
 <body>
 <h1> Ceci est la page du potin <%= Gossip.find(params['id'])%> </h1>
-<p> Voici son auteur : <%= Gossip.find(params['id']).user.first_name %> </p>
+<p> Voici son auteur : <%= Gossip.find(params['id']).user.first_name %>  <%= link_to "Accès à la page de l'auteur", dynamic_pages_profile_path(Gossip.find(params['id']).user.first_name) %></p>
 <p> Voici son titre : <%= Gossip.find(params['id']).title %> </p>
 <p> Voici son contenu : <%= Gossip.find(params['id']).content %> </p>
 

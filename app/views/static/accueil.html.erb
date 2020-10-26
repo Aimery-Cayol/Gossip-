@@ -1,8 +1,11 @@
 <center> 
 <h1> Bienvenue sur notre site de Gossip !<h1>
-<% @gossips.each do |g| %> 
+
+<% @gossips.each_with_index do |g, index| %>
+
 <p> <%= g.user.first_name %> </p>
 <p> <%= g.title %> </p>
+<p class="btn btn-light"> <%= link_to "Lien vers la page du gossip", dynamic_pages_show_path(index+1) %></p>
 <% end %>
 
 </center>

@@ -11,7 +11,11 @@ class StaticController < ApplicationController
   end
 
   def potin 
-    
   end 
 
+  def profile
+  end
+
+  def show
+  end 
 end
